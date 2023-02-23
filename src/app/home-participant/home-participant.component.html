@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<br/><br/>
+<h1 style="text-align: center;">Les Participants</h1>
+
+    <br/><br/> <div class="form-group">
+      <a href="/home">Home</a>
+  </div>
+    <br/><br/>
+
+
+
+
+  
+  <table class="table" style="border-spacing:0px">
+    <thead class="thead-light">
+        <tr>
+      <th> Identifiant  </th>
+    
+      <th>score</th>
+          
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of users" >
+            <td style="font-size: 20px;"> {{item.username}}       </td>
+          
+      
+
+
+            <td style="font-size: 20px; color:green"> {{item.score}}</td>
+          
+            <a  title="Modifier cette Question"    [routerLink]="['/editUser' , item._id]"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
+              <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>  </a>
+        </tr>
+     
+    </tbody>
+  </table>

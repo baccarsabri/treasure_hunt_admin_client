@@ -1,0 +1,104 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!--
+
+Copy this code in your html file.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container">
+     
+        <p class="h2 text-center">Ajouter Question</p>
+        <form action="" method="post">
+           
+            <div class="form-group">
+                <label>Question label*:</label>
+                <input class="form-control" type="text" name="question"  [(ngModel)]="label"required/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Repense 1*:</label>
+                <input class="form-control" type="text" name="r1"  [(ngModel)]="r1" required />
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Repense 2*:</label>
+                <input class="form-control" type="text" name="r2"   [(ngModel)]="r2"required />
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Repense 3:</label>
+                <input class="form-control" type="text" name="r3"  [(ngModel)]="r3" />
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Repense 4:</label>
+                <input class="form-control" type="text" name="r4"   [(ngModel)]="r4"/>
+                <span class="Error"></span>
+            </div>
+           
+            <div class="form-group">
+                <label>Temps en second*:</label>
+                <input class="form-control" type="number" name="fullname" required  [(ngModel)]="time"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Points*:</label>
+                <input class="form-control" type="number" name="fullname" required  [(ngModel)]="points"/>
+                <span class="Error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Repense*:</label><br/>
+              
+                <div class="custom-control custom-radio">
+                    <input id="f" type="radio" class="custom-control-input"  value="1" name="repense" (change)="onItemChange($event)" >
+                    <label class="custom-control-label" for="f">Repense 1</label>
+                 </div>
+                 <div class="custom-control custom-radio">
+                    <input id="2" type="radio" class="custom-control-input" value="2" name="repense" (change)="onItemChange($event)" >
+                    <label class="custom-control-label" for="2">Repense 2</label>
+                 </div>
+                 <div class="custom-control custom-radio">
+                    <input id="3" type="radio" class="custom-control-input" value="3"  name="repense" (change)="onItemChange($event)" >
+                    <label class="custom-control-label" for="3">Repense 3</label>
+                 </div>
+                 <div class="custom-control custom-radio">
+                    <input id="4" type="radio" class="custom-control-input" value="4"  name="repense" (change)="onItemChange($event)" >
+                    <label class="custom-control-label" for="4">Repense 4</label>
+                 </div>
+            </div>
+            <div class="file-upload">
+                <input
+                  type="file"
+                  name="image"
+                  ng2FileSelect
+                  [uploader]="uploader"
+                  accept="image/x-png,image/gif,image/jpeg"
+                />
+                
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary "  (click)="submit()"
+                value="Submit"/>
+            </div>
+         
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
